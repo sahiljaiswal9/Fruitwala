@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruitwala | Premium B2B Wholesale Fruit Supply</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .discount-badge { background: linear-gradient(45deg, #f59e0b, #d97706); }
+    </style>
+</head>
+<body class="bg-slate-50">
+
+    <!-- Top Bar -->
+    <div class="bg-green-700 text-white py-2 px-6 text-sm flex justify-between items-center">
+        <p><i class="fas fa-truck-fast mr-2"></i> Pan-India Wholesale Delivery | <span class="font-bold">Next Day Delivery in Delhi NCR</span></p>
+        <div class="hidden md:block">
+            <span class="mr-4"><i class="fas fa-phone mr-1"></i> Support: +91 9625067071</span>
+            <span><i class="fas fa-envelope mr-1"></i> sahiljaiswal9625@gmail.com</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-black text-green-600 tracking-tighter">FRUITWALA<span class="text-orange-500">.</span></a>
+            <div class="hidden lg:flex space-x-8 font-semibold text-gray-700">
+                <a href="#home" class="hover:text-green-600 transition">Home</a>
+                <a href="#shop" class="hover:text-green-600 transition">Catalogue</a>
+                <a href="#process" class="hover:text-green-600 transition">Process</a>
+                <a href="#testimonials" class="hover:text-green-600 transition">Clients</a>
+                <a href="#faq" class="hover:text-green-600 transition">FAQ</a>
+            </div>
+            <div class="flex items-center gap-6">
+                <button class="hidden md:block border-2 border-green-600 text-green-600 px-5 py-2 rounded-lg font-bold hover:bg-green-600 hover:text-white transition">Login</button>
+                <div class="relative cursor-pointer bg-green-100 p-3 rounded-full" onclick="toggleCart()">
+                    <i class="fas fa-basket-shopping text-xl text-green-700"></i>
+                    <span id="cart-count" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="relative min-h-[600px] flex items-center text-white">
+        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1600&q=80" 
+             class="absolute inset-0 w-full h-full object-cover brightness-[0.4]" alt="Warehouse">
+        <div class="container mx-auto px-6 relative">
+            <div class="max-w-2xl">
+                <span class="bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-bold tracking-wide uppercase mb-4 inline-block">Direct From Farmers</span>
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">Your Reliable <span class="text-green-400">Fruit Partner</span> for Business.</h1>
+                <p class="text-xl text-gray-200 mb-8 leading-relaxed">Supplying premium fruits to Hotels, Restaurants, Caterers, and Retailers nationwide with guaranteed 100% freshness.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#shop" class="bg-green-600 hover:bg-green-700 text-white px-10 py-4 rounded-xl font-bold text-lg shadow-lg transition">Browse Wholesale Price List</a>
+                    <a href="#" class="bg-white/10 backdrop-blur-md border border-white/30 hover:bg-white/20 text-white px-10 py-4 rounded-xl font-bold text-lg transition">Download Catalog</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Section -->
+    <section class="bg-white py-10 border-b">
+        <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="text-center">
+                <p class="text-3xl font-bold text-green-600">500+</p>
+                <p class="text-gray-500 font-medium">B2B Clients</p>
+            </div>
+            <div class="text-center">
+                <p class="text-3xl font-bold text-green-600">50+</p>
+                <p class="text-gray-500 font-medium">Fruit Varieties</p>
+            </div>
+            <div class="text-center">
+                <p class="text-3xl font-bold text-green-600">10 Tons</p>
+                <p class="text-gray-500 font-medium">Daily Dispatch</p>
+            </div>
+            <div class="text-center">
+                <p class="text-3xl font-bold text-green-600">15+</p>
+                <p class="text-gray-500 font-medium">Cities Covered</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Sections -->
+    <section id="shop" class="container mx-auto px-6 py-20">
+        <div class="flex justify-between items-end mb-12">
+            <div>
+                <h2 class="text-4xl font-bold text-slate-800">Fresh Stock</h2>
+                <p class="text-gray-500 mt-2 text-lg">Minimum Order Quantity (MOQ): 1 Crate (20kg)</p>
+            </div>
+            <div class="hidden md:flex gap-4">
+                <button class="px-6 py-2 rounded-full bg-green-600 text-white font-bold">All</button>
+                <button class="px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-bold hover:bg-gray-300">Exotic</button>
+                <button class="px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-bold hover:bg-gray-300">Seasonal</button>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Product 1 -->
+            <div class="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 overflow-hidden">
+                <div class="relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1570913149827-d2ac84ab3f9a" class="h-56 w-full object-cover group-hover:scale-105 transition" alt="Apple">
+                    <span class="absolute top-4 left-4 discount-badge text-white px-3 py-1 rounded-lg text-xs font-bold">Bulk Discount Available</span>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-xl text-slate-800">Washington Apples</h3>
+                        <span class="text-xs bg-slate-100 text-slate-500 px-2 py-1 rounded">Grade A</span>
+                    </div>
+                    <p class="text-gray-500 text-sm mb-4">Firm, sweet and crisp. Best for premium retail stores.</p>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-2xl font-bold text-green-600">₹340</span>
+                            <span class="text-gray-400 text-sm italic">/kg</span>
+                        </div>
+                        <button onclick="addToCart('Washington Apple', 140)" class="bg-slate-800 text-white p-3 rounded-xl hover:bg-green-600 transition">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 overflow-hidden">
+                <div class="relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1528825871115-3581a5387919" class="h-56 w-full object-cover group-hover:scale-105 transition" alt="Banana">
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-xl text-slate-800">Robusta Banana</h3>
+                        <span class="text-xs bg-slate-100 text-slate-500 px-2 py-1 rounded">Daily Harvest</span>
+                    </div>
+                    <p class="text-gray-500 text-sm mb-4">Bulk supply for hotels and kitchens. Ripening controlled.</p>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-2xl font-bold text-green-600">₹78</span>
+                            <span class="text-gray-400 text-sm italic">/dozen</span>
+                        </div>
+                        <button onclick="addToCart('Robusta Banana', 28)" class="bg-slate-800 text-white p-3 rounded-xl hover:bg-green-600 transition">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 (Exotic) -->
+            <div class="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 overflow-hidden">
+                <div class="relative overflow-hidden">
+                    <img src="https://alansgarden.in/wp-content/uploads/2025/02/dragonfruit-per-pc-approx-280-g-450-g-product-images-o590007689-p590007689-1-202410011659.webp" class="h-56 w-full object-cover group-hover:scale-105 transition" alt="Dragon Fruit">
+                    <span class="absolute top-4 left-4 bg-purple-600 text-white px-3 py-1 rounded-lg text-xs font-bold">Imported</span>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-xl text-slate-800">Dragon Fruit</h3>
+                        <span class="text-xs bg-slate-100 text-slate-500 px-2 py-1 rounded">Vietnamese</span>
+                    </div>
+                    <p class="text-gray-500 text-sm mb-4">Pink flesh, rich in antioxidants. Premium exotic selection.</p>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-2xl font-bold text-green-600">₹180</span>
+                            <span class="text-gray-400 text-sm italic">/Peice</span>
+                        </div>
+                        <button onclick="addToCart('Dragon Fruit', 180)" class="bg-slate-800 text-white p-3 rounded-xl hover:bg-green-600 transition">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 overflow-hidden">
+                <div class="relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1557800636-894a64c1696f" class="h-56 w-full object-cover group-hover:scale-105 transition" alt="Oranges">
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-xl text-slate-800">Kinnow Oranges</h3>
+                        <span class="text-xs bg-slate-100 text-slate-500 px-2 py-1 rounded">Juice Grade</span>
+                    </div>
+                    <p class="text-gray-500 text-sm mb-4">High juice content. Ideal for industrial juicing centers.</p>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-2xl font-bold text-green-600">₹95</span>
+                            <span class="text-gray-400 text-sm italic">/kg</span>
+                        </div>
+                        <button onclick="addToCart('Kinnow Oranges', 45)" class="bg-slate-800 text-white p-3 rounded-xl hover:bg-green-600 transition">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="process" class="bg-slate-900 text-white py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-4xl font-bold mb-4">The Fruitwala Workflow</h2>
+                <p class="text-gray-400">We’ve streamlined our logistics to ensure you get the freshest produce in the shortest time.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center text-3xl mb-6 mx-auto group-hover:bg-green-500 transition">1</div>
+                    <h3 class="text-xl font-bold mb-3">Order via Portal</h3>
+                    <p class="text-gray-400 text-sm">Select products and quantities. Auto-generated proforma invoice.</p>
+                </div>
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center text-3xl mb-6 mx-auto group-hover:bg-green-500 transition">2</div>
+                    <h3 class="text-xl font-bold mb-3">Quality Sorting</h3>
+                    <p class="text-gray-400 text-sm">Hand-picked sorting and grading at our central warehouse.</p>
+                </div>
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center text-3xl mb-6 mx-auto group-hover:bg-green-500 transition">3</div>
+                    <h3 class="text-xl font-bold mb-3">Eco-Packaging</h3>
+                    <p class="text-gray-400 text-sm">Packed in reusable crates to maintain airflow and prevent bruising.</p>
+                </div>
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center text-3xl mb-6 mx-auto group-hover:bg-green-500 transition">4</div>
+                    <h3 class="text-xl font-bold mb-3">Cold-Chain Delivery</h3>
+                    <p class="text-gray-400 text-sm">Dispatched in temperature-controlled trucks to your doorstep.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 italic text-slate-700">"The standard for wholesale fruit supply in the city."</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="p-8 border border-slate-100 rounded-2xl shadow-sm">
+                    <div class="flex text-orange-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-600 mb-6 font-medium leading-relaxed">"Fruitwala has been our sole fruit supplier for our chain of 15 juice centers. Consistency in quality is their biggest strength."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-slate-200 rounded-full"></div>
+                        <div>
+                            <h4 class="font-bold">Rahul Verma</h4>
+                            <p class="text-xs text-gray-500">CEO, FreshJuice Co.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8 border border-slate-100 rounded-2xl shadow-sm">
+                    <div class="flex text-orange-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-600 mb-6 font-medium leading-relaxed">"Ordering is seamless and the pricing is very competitive compared to the local Mandis. Saved us nearly 15% monthly."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-slate-200 rounded-full"></div>
+                        <div>
+                            <h4 class="font-bold">Sarah D'souza</h4>
+                            <p class="text-xs text-gray-500">Procurement Manager, Grand Regency Hotel</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8 border border-slate-100 rounded-2xl shadow-sm">
+                    <div class="flex text-orange-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-600 mb-6 font-medium leading-relaxed">"Their exotic fruit range is unmatched. We get avocados and dragon fruits in perfect ripening condition every time."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-slate-200 rounded-full"></div>
+                        <div>
+                            <h4 class="font-bold">Ankit Mehta</h4>
+                            <p class="text-xs text-gray-500">Founder, HealthBox India</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <details class="bg-white p-6 rounded-xl border border-slate-200 cursor-pointer">
+                    <summary class="font-bold text-lg text-slate-800">What is the Minimum Order Quantity (MOQ)?</summary>
+                    <p class="mt-4 text-gray-600">Our MOQ is typically 1 full crate per variety. Depending on the fruit, this ranges between 15kg to 25kg.</p>
+                </details>
+                <details class="bg-white p-6 rounded-xl border border-slate-200 cursor-pointer">
+                    <summary class="font-bold text-lg text-slate-800">Do you offer credit periods for businesses?</summary>
+                    <p class="mt-4 text-gray-600">Yes, we offer a 7-day to 15-day credit period for registered corporate clients after a successful 1-month onboarding period.</p>
+                </details>
+                <details class="bg-white p-6 rounded-xl border border-slate-200 cursor-pointer">
+                    <summary class="font-bold text-lg text-slate-800">How do you handle damaged goods?</summary>
+                    <p class="mt-4 text-gray-600">We have a "No-Questions-Asked" replacement policy for items reported as damaged at the time of delivery.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-gray-300 pt-20 pb-10">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-slate-800 pb-16">
+            <div class="col-span-1 md:col-span-1">
+                <a href="#" class="text-3xl font-black text-white tracking-tighter mb-6 block">FRUITWALA<span class="text-orange-500">.</span></a>
+                <p class="text-sm leading-relaxed mb-6">Revolutionizing the fruit supply chain with technology and farm-direct sourcing since 2015.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="h-10 w-10 bg-slate-800 flex items-center justify-center rounded-full hover:bg-green-600 transition"><i class="fab fa-facebook-f text-white"></i></a>
+                    <a href="#" class="h-10 w-10 bg-slate-800 flex items-center justify-center rounded-full hover:bg-green-600 transition"><i class="fab fa-linkedin-in text-white"></i></a>
+                    <a href="#" class="h-10 w-10 bg-slate-800 flex items-center justify-center rounded-full hover:bg-green-600 transition"><i class="fab fa-whatsapp text-white"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Quick Links</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#" class="hover:text-green-500">About Us</a></li>
+                    <li><a href="#" class="hover:text-green-500">Corporate Gifting</a></li>
+                    <li><a href="#" class="hover:text-green-500">Partnership Program</a></li>
+                    <li><a href="#" class="hover:text-green-500">Sustainability</a></li>
+                    <li><a href="#" class="hover:text-green-500">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Operational Cities</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><i class="fas fa-location-dot mr-2 text-green-500"></i> New Delhi (HQ)</li>
+                    <li><i class="fas fa-location-dot mr-2 text-green-500"></i> Mumbai</li>
+                    <li><i class="fas fa-location-dot mr-2 text-green-500"></i> Bangalore</li>
+                    <li><i class="fas fa-location-dot mr-2 text-green-500"></i> Hyderabad</li>
+                    <li><i class="fas fa-location-dot mr-2 text-green-500"></i> Dubai (Coming Soon)</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Newsletter</h4>
+                <p class="text-xs mb-4 text-gray-500">Get weekly wholesale price updates.</p>
+                <form class="flex">
+                    <input type="email" placeholder="Your Email" class="bg-slate-800 border-none rounded-l-lg px-4 py-2 w-full text-sm outline-none focus:ring-1 focus:ring-green-500">
+                    <button class="bg-green-600 px-4 py-2 rounded-r-lg hover:bg-green-700 transition">Join</button>
+                </form>
+            </div>
+        </div>
+        <div class="text-center mt-10 text-xs text-gray-600 font-medium">
+            © 2024 Fruitwala Wholesale Pvt. Ltd. All rights reserved. | FSSAI License: 12345678901234
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="fixed right-0 top-0 h-full w-full md:w-96 bg-white shadow-2xl translate-x-full transition-transform duration-300 z-[60] flex flex-col">
+        <div class="p-6 border-b flex justify-between items-center bg-slate-50">
+            <h2 class="text-xl font-bold text-slate-800">Your Quotation <span class="text-sm font-normal text-gray-500">(MOQ 20kg per item)</span></h2>
+            <button onclick="toggleCart()" class="text-gray-400 hover:text-red-500 transition"><i class="fas fa-times text-2xl"></i></button>
+        </div>
+        <div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-4">
+            <!-- Items appear here -->
+        </div>
+        <div class="p-6 border-t bg-white">
+            <div class="flex justify-between text-lg font-bold mb-6 text-slate-800">
+                <span>Total Amount:</span>
+                <span id="cart-total" class="text-green-600">₹0</span>
+            </div>
+            <button onclick="sendWhatsApp()" class="w-full bg-green-600 hover:bg-green-700 text-white py-4 rounded-xl font-bold flex items-center justify-center gap-3 transition shadow-lg">
+                <i class="fab fa-whatsapp text-xl"></i>
+                Request Wholesale Quote
+            </button>
+            <p class="text-center text-xs text-gray-400 mt-4 italic">Free delivery on orders above ₹5000</p>
+        </div>
+    </div>
+
+    <script>
+        let cart = [];
+        const crateWeight = 20; // Wholesale MOQ: 20kg per item
+
+        function toggleCart() {
+            document.getElementById('cart-sidebar').classList.toggle('translate-x-full');
+        }
+
+        function addToCart(name, pricePerKg) {
+            const existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.qty += 1;
+            } else {
+                cart.push({ name, price: pricePerKg, qty: 1 });
+            }
+            updateUI();
+            if(document.getElementById('cart-sidebar').classList.contains('translate-x-full')) {
+                toggleCart();
+            }
+        }
+
+        function removeItem(index) {
+            cart.splice(index, 1);
+            updateUI();
+        }
+
+        function updateUI() {
+            const container = document.getElementById('cart-items');
+            const countDisplay = document.getElementById('cart-count');
+            const totalDisplay = document.getElementById('cart-total');
+            
+            countDisplay.innerText = cart.length;
+            
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-20">
+                        <i class="fas fa-cart-arrow-down text-5xl text-gray-200 mb-4"></i>
+                        <p class="text-gray-400 italic">No items selected for quotation</p>
+                    </div>`;
+                totalDisplay.innerText = '₹0';
+                return;
+            }
+
+            let total = 0;
+            container.innerHTML = cart.map((item, index) => {
+                const itemTotal = item.price * (item.qty * crateWeight);
+                total += itemTotal;
+                return `
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-slate-800 text-lg">${item.name}</h4>
+                            <button onclick="removeItem(${index})" class="text-gray-300 hover:text-red-500"><i class="fas fa-trash-can"></i></button>
+                        </div>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-gray-500">${item.qty} Crate(s) (${item.qty * crateWeight}kg)</span>
+                            <span class="font-bold text-slate-700">₹${itemTotal.toLocaleString()}</span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            totalDisplay.innerText = `₹${total.toLocaleString()}`;
+        }
+
+        function sendWhatsApp() {
+            if(cart.length === 0) return alert("Add items first!");
+            
+            let message = "Hello Fruitwala, I want a wholesale quote for:\n\n";
+            cart.forEach(item => {
+                message += `• ${item.name}: ${item.qty} Crates (${item.qty * crateWeight}kg)\n`;
+            });
+            message += `\nEstimated Total: ${document.getElementById('cart-total').innerText}\n\nPlease confirm delivery time.`;
+            
+            const encodedMsg = encodeURIComponent(message);
+            window.open(`https://wa.me/919876543210?text=${encodedMsg}`, '_blank');
+        }
+    </script>
+</body>
+</html>
